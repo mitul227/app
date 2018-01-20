@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <h1> All Links </h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @links.each do |link| %>
+      <tr>
+        <td><%= link_to(link.title, link) %>
+        <td><%= link.url %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
